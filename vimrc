@@ -25,9 +25,6 @@ set smartcase
 " 最後まで検索したら最初から
 set wrapscan
 
-" jj で挿入モードを抜けるように
-inoremap <expr> j getline('.')[col('.') - 2] ==# 'j' ? "\<BS>\<ESC>" : 'j'
-
 " NeoBundle and ruby config
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
 
@@ -46,10 +43,9 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
+
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 NeoBundle 'alpaca-tc/alpaca_tags'
@@ -57,8 +53,44 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'bbatsov/rubocop'
 NeoBundle 'tpope/vim-endwise'
 
+
+"" neosnippet
+"" 参考URL: http://promamo.com/?p=1944
+
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
+"
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+"
+" " SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 
-filetype plugin indent on     " required!
+" " For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" vim-snippets
+" https://github.com/honza/vim-snippets
+" git clone https://github.com/honza/vim-snippets.git
+" ~/.vim/bundle/vim-snippets
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+"
+" " Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+ 
+"" end neosnippet
+
+filetype plugin indent on
+
