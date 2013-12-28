@@ -94,7 +94,13 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 NeoBundle 'w0ng/vim-hybrid'
 "color scheme
 colorscheme hybrid
+
+" set t_Co=256
 "" end Color Setting
+
+"" Git Config
+NeoBundle 'tpope/vim-fugitive'
+
 
 filetype plugin indent on
 
