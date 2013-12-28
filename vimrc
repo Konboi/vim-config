@@ -1,3 +1,7 @@
+filetype off
+filetype plugin indent off
+
+
 " 行番号を表示する
 set number
 
@@ -10,10 +14,20 @@ set showmatch
 " コードの色付け
 syntax on
 
-" インデントをスペース4に
-set tabstop=4
+" タブ入力を複数の空白入力に置き換える
+set expandtab
 
-" オートインデント
+
+"自動インデントでずれる幅
+set shiftwidth=2
+
+" インデントをスペース4に
+set tabstop=2
+
+" 改行時に前の行のインデントを継続する
+set autoindent
+
+" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set smartindent
 
 " 検索時に大文字/小文字を区別なく検索する
@@ -24,6 +38,7 @@ set smartcase
 
 " 最後まで検索したら最初から
 set wrapscan
+
 
 " NeoBundle and ruby config
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
@@ -101,6 +116,24 @@ colorscheme hybrid
 "" Git Config
 NeoBundle 'tpope/vim-fugitive'
 
+"" end git config
+
+"" lightline
+NeoBundle 'itchyny/lightline.vim'
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+"" end lightline
+
+"" JavaScript Config
+NeoBundle 'jiangmiao/simple-javascript-indenter'
+
+"" end Javascript Config
+
+"" HTML Config
+NeoBundle "mattn/emmet-vim"
+"" end HTML Config
+
 
 filetype plugin indent on
-
