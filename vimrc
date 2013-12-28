@@ -79,9 +79,7 @@ if has('conceal')
 endif
 
 " vim-snippets
-" https://github.com/honza/vim-snippets
-" git clone https://github.com/honza/vim-snippets.git
-" ~/.vim/bundle/vim-snippets
+NeoBundle 'honza/vim-snippets'
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
