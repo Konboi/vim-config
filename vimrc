@@ -39,7 +39,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Bundle Config
 
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
@@ -91,6 +90,13 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
  
 "" end neosnippet
+
+
+"" Color Setting
+NeoBundle 'w0ng/vim-hybrid'
+"color scheme
+colorscheme hybrid
+"" end Color Setting
 
 filetype plugin indent on
 
