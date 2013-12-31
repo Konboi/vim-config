@@ -147,4 +147,9 @@ NeoBundle "Shougo/vimfiler.vim"
 
 "" end vimfiler Config
 
+"" vim-gitgutter
+NeoBundle "airblade/vim-gitgutter"
+
+"" end vim-gitgutter
+
 filetype plugin indent on
