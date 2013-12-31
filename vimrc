@@ -133,7 +133,18 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 
 "" HTML Config
 NeoBundle "mattn/emmet-vim"
+
+NeoBundle 'marijnh/tern_for_vim', {
+  \ 'build': {
+  \   'others': 'npm install'
+  \}}
+
 "" end HTML Config
 
+"" vimfiler Config
+
+NeoBundle "Shougo/vimfiler.vim"
+
+"" end vimfiler Config
 
 filetype plugin indent on
