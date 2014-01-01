@@ -52,13 +52,13 @@ vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
 
-" NeoBundle 
+" NeoBundle
 "
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
 
 if has('vim_starting')
-	set nocompatible               " be iMproved
-	set runtimepath+=~/.vim/bundle/neobundle.vim
+  set nocompatible               " be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -95,11 +95,11 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 "
 " " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
- smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
 
 " " For snippet_complete marker.
 if has('conceal')
@@ -114,7 +114,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 "
 " " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
- 
+
 "" end neosnippet
 
 
@@ -148,9 +148,9 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle "mattn/emmet-vim"
 
 NeoBundle 'marijnh/tern_for_vim', {
-  \ 'build': {
-  \   'others': 'npm install'
-  \}}
+      \ 'build': {
+      \   'others': 'npm install'
+      \}}
 
 "" end HTML Config
 
@@ -164,5 +164,12 @@ NeoBundle "Shougo/vimfiler.vim"
 NeoBundle "airblade/vim-gitgutter"
 
 "" end vim-gitgutter
+
+"" Hightlight Tail space
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
 
 filetype plugin indent on
