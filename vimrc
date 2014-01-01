@@ -39,8 +39,21 @@ set smartcase
 " 最後まで検索したら最初から
 set wrapscan
 
+" 括弧類の自動補完設定
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi{<C-R>z}<ESC>
+vnoremap [ "zdi[<C-R>z]<ESC>
+vnoremap ( "zdi(<C-R>z)<ESC>
+vnoremap " "zdi"<C-R>z"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
 
-" NeoBundle and ruby config
+
+" NeoBundle 
+"
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
 
 if has('vim_starting')
