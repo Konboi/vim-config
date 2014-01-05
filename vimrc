@@ -142,14 +142,14 @@ NeoBundle 'marijnh/tern_for_vim', {
 "" end HTML Config
 
 "" vimfiler Config
-
 NeoBundle "Shougo/vimfiler.vim"
-
 "" end vimfiler Config
 
 "" vim-gitgutter
 NeoBundle "airblade/vim-gitgutter"
-
 "" end vim-gitgutter
 
+"" vim-over
+NeoBundle "osyo-manga/vim-over"
+""
 filetype plugin indent on
