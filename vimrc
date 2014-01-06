@@ -39,6 +39,9 @@ set smartcase
 " 最後まで検索したら最初から
 set wrapscan
 
+" 行の折り返しをやめる
+:set nowrap
+
 " 括弧類の自動補完設定
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
@@ -72,6 +75,10 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Align'
+
+" Day One
+NeoBundle 'glidenote/newdayone.vim'
 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
