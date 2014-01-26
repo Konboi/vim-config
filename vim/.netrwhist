@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/yabuki-ryosuke/vagrants/workspace/chef'
-let g:netrw_dirhist_2='/Users/yabuki-ryosuke/vagrants/workspace/chef/site-cookbooks'
-let g:netrw_dirhist_3='/Users/yabuki-ryosuke/vagrants/workspace/chef'
-let g:netrw_dirhist_4='/Users/yabuki-ryosuke/vagrants/workspace/chef/data_bags'
-let g:netrw_dirhist_5='/Users/yabuki-ryosuke/vagrants/workspace/chef/data_bags/projects'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/vagrant/project/mindemo'
+let g:netrw_dirhist_2='/home/vagrant/project/mindemo/spec'
+let g:netrw_dirhist_3='/home/vagrant/project/sangokushi-royale/lib/ogp_generator'
+let g:netrw_dirhist_4='/home/vagrant/project/mindemo'
