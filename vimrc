@@ -239,6 +239,11 @@ au BufNewFile,BufRead *.cap setf ruby
 au BufNewFile,BufRead Gemfile setf ruby
 ""
 
+"" Perl config
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl
+autocmd BufNewFile,BufRead *.t      set filetype=perl
+
+
 "" vim-smartchr
 NeoBundle "kana/vim-smartchr"
 inoremap <buffer> <expr> = smartchr#loop('=', '=>', '==')
