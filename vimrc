@@ -143,7 +143,7 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 "
-" " SuperTab like snippets behavior.
+" SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -151,7 +151,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
 
-" " For snippet_complete marker.
+" For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
@@ -199,12 +199,26 @@ NeoBundle "mattn/emmet-vim"
 
 "" end HTML Config
 
-"" sass config
-NeoBundle 'cakebaker/scss-syntax.vim'
+"" NERDTree Config
+NeoBundle "scrooloose/nerdtree"
 
-"" vimfiler Config
-NeoBundle "Shougo/vimfiler.vim"
+NeoBundle 'scrooloose/nerdtree.git'
+nmap <silent> <C-e>      :NERDTreeToggle<CR>
+vmap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
+omap <silent> <C-e>      :NERDTreeToggle<CR>
+imap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
+cmap <silent> <C-e> <C-u>:NERDTreeToggle<CR>
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeIgnore=['\.clean$', '\.swp$', '\.bak$', '\~$']
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeDirArrows=0
+let g:NERDTreeMouseMode=2
+
 "" end vimfiler Config
+
+NeoBundle "szw/vim-tags"
 
 "" vim-gitgutter
 NeoBundle "airblade/vim-gitgutter"
@@ -223,5 +237,16 @@ NeoBundle "osyo-manga/vim-over"
 "" ruby config
 au BufNewFile,BufRead *.cap setf ruby
 au BufNewFile,BufRead Gemfile setf ruby
+""
+
+"" vim-smartchr
+NeoBundle "kana/vim-smartchr"
+inoremap <buffer> <expr> = smartchr#loop('=', '=>', '==')
+inoremap <buffer> <expr> - smartchr#loop('-', '->')
+inoremap <buffer> <expr> < smartchr#loop('<', '<%', '<%=')
+inoremap <buffer> <expr> > smartchr#loop('>', '%>')
+
 
 filetype plugin indent on
+
+
