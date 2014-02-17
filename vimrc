@@ -219,5 +219,9 @@ augroup END
 
 "" vim-over
 NeoBundle "osyo-manga/vim-over"
-""
+
+"" ruby config
+au BufNewFile,BufRead *.cap setf ruby
+au BufNewFile,BufRead Gemfile setf ruby
+
 filetype plugin indent on
