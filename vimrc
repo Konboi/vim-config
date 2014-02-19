@@ -251,6 +251,9 @@ inoremap <buffer> <expr> - smartchr#loop('-', '->')
 inoremap <buffer> <expr> < smartchr#loop('<', '<%', '<%=')
 inoremap <buffer> <expr> > smartchr#loop('>', '%>')
 
+"" vim markdown preview
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 filetype plugin indent on
 
