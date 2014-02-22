@@ -89,13 +89,6 @@ let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=2
 
 
-"" vim-over
-NeoBundle "osyo-manga/vim-over"
-
-"" Perl config
-autocmd BufNewFile,BufRead *.psgi   set filetype=perl
-autocmd BufNewFile,BufRead *.t      set filetype=perl
-
 NeoBundle "szw/vim-tags"
 NeoBundle 'alpaca-tc/alpaca_tags'
 
