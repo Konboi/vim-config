@@ -40,19 +40,6 @@ set wrapscan
 " クリップボート連携
 set clipboard=unnamed,autoselect
 
-" 括弧類の自動補完設定
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-vnoremap { "zdi{<C-R>z}<ESC>
-vnoremap [ "zdi[<C-R>z]<ESC>
-vnoremap ( "zdi(<C-R>z)<ESC>
-vnoremap " "zdi"<C-R>z"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
-
-
 " NeoBundle
 "
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
@@ -238,12 +225,5 @@ au BufNewFile,BufRead Gemfile setf ruby
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 
-
-"" vim-smartchr
-NeoBundle "kana/vim-smartchr"
-inoremap <buffer> <expr> = smartchr#loop('=', '=>', '==')
-inoremap <buffer> <expr> - smartchr#loop('-', '->')
-inoremap <buffer> <expr> < smartchr#loop('<', '<%', '<%=')
-inoremap <buffer> <expr> > smartchr#loop('>', '%>')
 
 
