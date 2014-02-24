@@ -29,6 +29,6 @@ au! BufWritePost *.pm call s:check_package_name()
 
 " http://hakobe932.hatenablog.com/entry/2014/01/21/214100
 if !exists('g:neocomplcache_delimiter_patterns')
-  let g:neocomplcache_delimiter_patterns = {}}
+  let g:neocomplcache_delimiter_patterns = {}
 endif
 let g:neocomplcache_delimiter_patterns['perl'] = []
