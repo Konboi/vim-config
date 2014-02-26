@@ -14,10 +14,10 @@ syntax on
 set expandtab
 
 "自動インデントでずれる幅
-set shiftwidth=2
+set shiftwidth=4
 
 " インデントをスペース4に
-set tabstop=2
+set tabstop=4
 
 " 改行時に前の行のインデントを継続する
 set autoindent
