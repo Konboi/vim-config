@@ -8,21 +8,9 @@ call smartinput#define_rule({
             \   })
 
 call smartinput#define_rule({
-            \   'at'    : '( \%# )',
-            \   'char'  : '<BS>',
-            \   'input' : '<Del><BS>',
-            \   })
-
-call smartinput#define_rule({
             \   'at'    : '{\%#}',
             \   'char'  : '<Space>',
             \   'input' : '<Space><Space><Left>',
-            \   })
-
-call smartinput#define_rule({
-            \   'at'    : '{ \%# }',
-            \   'char'  : '<BS>',
-            \   'input' : '<Del><BS>',
             \   })
 
 call smartinput#define_rule({
@@ -32,32 +20,14 @@ call smartinput#define_rule({
             \   })
 
 call smartinput#define_rule({
-            \   'at'    : '[ \%# ]',
-            \   'char'  : '<BS>',
-            \   'input' : '<Del><BS>',
-            \   })
-
-call smartinput#define_rule({
             \   'at'    : '"\%#"',
             \   'char'  : '<Space>',
             \   'input' : '<Space><Space><Left>',
             \   })
 
 call smartinput#define_rule({
-            \   'at'    : '" \%# "',
-            \   'char'  : '<BS>',
-            \   'input' : '<Del><BS>',
-            \   })
-
-call smartinput#define_rule({
             \   'at'    : "'\%#'",
             \   'char'  : '<Space>',
             \   'input' : '<Space><Space><Left>',
-            \   })
-
-call smartinput#define_rule({
-            \   'at'    : "' \%# '",
-            \   'char'  : '<BS>',
-            \   'input' : '<Del><BS>',
             \   })
 

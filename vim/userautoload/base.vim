@@ -40,10 +40,22 @@ set wrapscan
 " クリップボート連携
 set clipboard=unnamed,autoselect
 
+nnoremap <F4> :e ~/.vim/userautoload/base.vim<CR>
+nnoremap <F5> :source %<CR>
+nnoremap <BS> :b#<CR>
+
+nnoremap <silent> ;nt :<C-u>tabnew<CR>
+nnoremap <silent> ;d :q<CR>
+
+nnoremap <silent> ;v :vs<CR>
+nnoremap <silent> ;s :sp<CR>
+
+nnoremap vv ^v$h
+vnoremap vv $h
+
 " NeoBundle
 "
 " 参考URL: http://qiita.com/us10096698/items/893f7e3c0b1ba69fdd23
-
 if has('vim_starting')
   set nocompatible               " be iMproved
   set runtimepath+=~/.vim/bundle/neobundle.vim
