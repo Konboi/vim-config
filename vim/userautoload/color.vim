@@ -10,7 +10,6 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-
 "" Hightlight Tail space
 augroup HighlightTrailingSpaces
   autocmd!
