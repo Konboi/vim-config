@@ -44,10 +44,15 @@ nnoremap <F4> :e ~/.vim/userautoload/base.vim<CR>
 nnoremap <F5> :source ~/.vimrc<CR>
 nnoremap <silent> ;w :w<CR>
 nnoremap <silent> ;q :q<CR>
-nnoremap <BS> :b#<CR>
+nnoremap <silent> ;s :sp<CR>
+nnoremap <silent> ;v :vs<CR>
+noremap <BS> :b#<CR>
 
 nnoremap vv ^v$h
 vnoremap vv $h
+
+" 保存時行末の空白を除去
+au BufWritePre * :%s/\s\+$//ge
 
 " matchit.vim
 runtime macros/matchit.vim
