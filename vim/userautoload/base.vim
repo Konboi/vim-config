@@ -95,3 +95,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 NeoBundle "szw/vim-tags"
 NeoBundle 'alpaca-tc/alpaca_tags'
+
+NeoBundle 'rking/ag.vim'
+nnoremap ;gr :Ag<Space>-a<Space>-S<Space>
+
